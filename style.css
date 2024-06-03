@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.6rem;
+}
+
+h1 {
+  color: #34355B;
+  font-family: Montserrat;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+}
+
+/* COMEÇO SCREEN 1 */
+.screen1, .screen2 {
+  padding: 48px 0px 64px 0px; 
+  text-align: center;
+  background: #FFF;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+  height: 31.2rem;
+  width: 42.8rem;
+  box-sizing: content-box;
+  border-radius: .5rem;
+  margin: 0px 20px 200px 20px
+}
+
+.screen1 p {
+  color: #34355B;
+  font-family: DM Sans;
+  font-size: 1.5rem;
+  margin-bottom: 2.6rem;
+}
+
+.screen1 img{
+  animation: vibrate 0.6s infinite;
+}
+/* FIM SCREEN 1 */
+
+.screen2 {
+  height: 56.4rem;
+  padding: 48px 64px;
+  box-sizing: border-box;
+  margin: 0px 20px 200px 20px
+} 
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.frase {
+  background: #E4EDF1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+  padding: 1rem;
+  max-width: 27.3rem;
+  min-height: 8.7rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  font-family: "Dancing Script", "Arial";
+  font-size: 2.4rem;
+  margin-bottom: 2.7rem;
+  animation: subirElemento 2s ease-in-out forwards;
+}
+
+.screen2 h1 {
+  margin-bottom: 1.7rem;
+  text-align: center;
+}
+
+.screen2 img {
+  margin-bottom: 5.9rem;
+}
+
+.screen2 button {
+  border-radius: 4px;
+  background: #FF9500;
+  padding: 1.6rem;
+  border: 0;
+  color: #FFF;
+  font-family: "DM Sans", "Arial";
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  /* Estilos a serem aplicados em telas com largura igual ou maior a 768px */
+  /* Por exemplo: */
+
+  img {
+    max-width: 100%;
+  }
+
+  .screen2 {
+    margin: 2.0rem;
+  }
+
+  .screen2 h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    flex: 1; /* Adicionando a propriedade flex: 1 para ocupar todo o espaço disponível */
+  }
+
+  .frase {
+    font-size: 1.9rem;
+  }
+
+  .screen2 button {
+    padding: .9rem;
+  }
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px) rotate(1deg); }
+  50% { transform: translateX(2px) rotate(-1deg); }
+  75% { transform: translateX(-2px) rotate(1deg); }
+  100% { transform: translateX(2px) rotate(-1deg); }
+}
+
+@keyframes subirElemento {
+  0% {
+    transform: translateY(130%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
